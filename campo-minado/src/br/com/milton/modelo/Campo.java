@@ -20,6 +20,14 @@ public class Campo {
 		this.linha = linha;
 		this.coluna = coluna;
 	}
+	
+	public int getLinha() {
+		return linha;
+	}
+
+	public int getColuna() {
+		return coluna;
+	}
 
 	public boolean adicionarVizinhos(Campo vizinho) {
 		boolean linhaDiferente = linha != vizinho.linha;
@@ -71,6 +79,10 @@ public class Campo {
 	public void minar() {
 		minado = true;
 	}
+	
+	public boolean isMinado() {
+		return minado;
+	}
 
 	public boolean isMarcado() {
 		return marcado;
@@ -78,6 +90,10 @@ public class Campo {
 
 	public boolean isAberto() {
 		return aberto;
+	}
+	
+	protected void setAberto(boolean aberto) {
+		this.aberto = aberto;
 	}
 
 	public boolean objetivoAlcancado() {
